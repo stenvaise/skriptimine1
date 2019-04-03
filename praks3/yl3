@@ -1,0 +1,7 @@
+#! /bin/bash
+#mitu päeva antud masin tööl on olnud
+
+echo "Arvuti " `hostname` "on töödanud " `uptime -p | cut -f1 -d "," | cut -f2 -d " "`" tundi"
+
+#
+#Skripti lõpp

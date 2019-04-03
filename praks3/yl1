@@ -1,0 +1,9 @@
+#! /bin/bash
+#
+# Kuupäev ja kalender
+#
+echo -n "Täna on "
+date +"%A, %B, %X" #kuupäev
+cal #kalender
+
+#Skripti lõpp
