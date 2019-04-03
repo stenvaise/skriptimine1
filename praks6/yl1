@@ -1,0 +1,13 @@
+#! /bin/bash
+#skripti algus
+#Küsib kasutaja käest täisarvu ja annab vastuseks kas on paaris või paaritu arv
+read -p "Sisesta suvaline täisarv: " a #küsib arvu ja annab talle väärtuse a
+jaak=$(($a %2)) # arvutab jäägi arvust a
+if [ $jaak -eq 0 ]# #kui jääk on 0  
+then
+	echo "Arv on paaris." #siis arv on paaris
+else #kui ei ole jääk null
+	echo "Sisestatud arv on paaritu." #on arv paaritu
+fi
+#
+#skripti lõpp

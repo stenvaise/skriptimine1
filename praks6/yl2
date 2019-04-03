@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# abiks bussiekskursiooni korraldamisel 
+echo -n "Mitu reisijat grupis: "
+read reisijad #küsib reisijate arvu
+echo -n "Mitu kohta on bussis: "
+read kohad #küsib kohtade arvu
+if [ $kohad -gt $reisijad ]
+then
+	vaba=`expr $kohad - $reisijad` #mitu vaba kohta jääb bussi
+	echo "Bussi jääb" $vaba" kohta." #väljastab mitu kohta jääb bussi
+else
+	bussi=`expr $reisijad / $kohad` # mitu bussi saab täis
+	maxkohad=`expr $kohad \* $bussi` # mitu kohta on bussides kokku
+	maha=`expr $reisijad - $maxkohad` #mitu jääb üle
+	if [ $reisijad -gt $maxkohad ] #kui inimesi on rohkem kui kohti tuleb lisa buss tellida
+	then
+		bussi=`expr $bussi + 1`
+	fi
+echo "Vaja on "$bussi" bussi."
+fi
+#skripti lõpp

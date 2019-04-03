@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+if [ "$1" == "" ] #kui kasutaja väärtust ei sisesta 
+then
+	echo "Parameeter puudub. Käivita skriptja sisesta koos käivitamisega täisarv"
+# väljastab vastuseks et parameeter puudub ja käseb täisarvuga koos käivitada
+else #kui väärtuse sisestab
+vaartus=$(( $1 % 2 )) # kas jääk jääb 2-ga jagamisel
+	if [ $vaartus -eq 0 ] # kui jääk võrdub 0-ga
+	then
+		echo $1 " Arv on paaris" # siis arv on paaris
+	else
+		echo $1 " Arv on paaritu" # kui ei võrdu 0 siis arv on paaritu
+        fi # if lõpp
+fi # if lõpp
+#
+#skripti lõpp
