@@ -1,0 +1,25 @@
+#!/bin/bash
+#Küsib kasutajalt kellaaega ja tervitab kasutajat vastavalt
+#
+echo -e "Mis kell on: \c" #küsib ja salvestab aja 
+read aeg
+if [ $aeg -ge 6 -a $aeg -lt 12 ] #kui kell on 6 ja 12 vahel
+then
+	echo "Tere hommikust!" #ütleb tere hommikust
+elif [ $aeg -ge 12 -a $aeg -lt 18 ] # kul kell on 12 ja 18 vahel
+then
+	echo "Tere päevast!" #ütleb tere päevast
+elif [ $aeg -ge 18 -a $aeg -lt 22 ] #kui kell on 18 ja 22 vahel
+then
+	echo "Tere õhtust!" #ütleb tere õhtust
+elif [ $aeg -ge 22 -a $aeg -le 24 ] #kui kell on 22 ja 24 vahel
+then
+	echo "Head ööd!" #ütleb head ööd
+elif [ $aeg -ge 0 -a $aeg -lt 6 ] #kui kell on 0 ja 6 vahel
+then
+	echo "Head ööd!" #ütleb head ööd
+else
+	echo "Vale sisend"
+fi
+#
+# skripti lõpp

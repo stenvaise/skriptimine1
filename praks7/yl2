@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+read -p "Sisesta kuu number 1-12ni" kuu #küsib kasutajalt kuu numbrit
+if [ $kuu -eq 1  -o  $kuu -eq 2  -o  $kuu -eq 12 ]
+#kuu on võrdne 1ga või võrdne 2ga või võrdne 12ga väljastab talv
+then
+	echo "Praegu on talv"
+elif [ $kuu -ge 3 ] && [ $kuu -le 5 ]
+#kuu on suurem või võrdne 3ga ja väiksem  või võrdne 5ga väljastab kevad
+then
+	echo "Praegu on kevad"
+elif [ $kuu -ge 6 ] && [ $kuu -le 8 ]
+#kuu on suurem või võrdne 6ga ja väiksem või võrdne 8ga väljastab suve
+then
+	echo "Praegu on suvi"
+elif [ $kuu -ge 9 ] && [ $kuu -le 11 ]
+#kuu o n suurem või võrdne 9ga ja väiksem võrdne 11ga väljastab sügis
+then
+	echo "Praegu on sügis"
+else
+#kõikidel teistel juhtudel on sisend vale ja ütleb kasutajale seda
+	echo "Kuu peab olema sisestatud positiivse täisarvuna 1 - 12ni"
+fi #if lõpp
+#
+#skripti lõpp

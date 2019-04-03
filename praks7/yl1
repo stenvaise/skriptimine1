@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+read -p "Sisesta oma vanus positiivse täisarvuna" vanus #küsib kasutaja vanust
+if [ $vanus -ge 0 ] && [ $vanus -le 11 ]
+#vanus on suurem või võrdne 0ga ja väiksem või võrdne 11ga väljastab oled laps
+then
+	echo "Oled laps"
+elif [ $vanus -ge 12 ] && [ $vanus -le 18 ]
+#vanus on suurem või võrdne 12ga ja väiksem  või võrdne 18ga oled noorkud
+then
+	echo "Oled nooruk"
+elif [ $vanus -ge 19 ] && [ $vanus -le 63 ]
+#vanus on suurem või võrdne 19ga ja väiksem või võrdne 63ga oled täiskasvanu
+then
+	echo "Oled täiskasvanu"
+elif [ $vanus -ge 64 ]
+#vanus suurem või võrdne 64ga oled vanur
+then
+	echo "Oled vanur"
+else
+#kõikidel teistel juhtudel on sisend vale ja ütleb kasutajale seda
+	echo "Vanus peab olema sisestatud positiivse täisarvuna"
+fi
+#
+#skripti lõpp

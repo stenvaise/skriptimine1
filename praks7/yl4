@@ -1,0 +1,26 @@
+#!/bin/bash
+#Küsib kasutajalt kellaaega ja loeb mis kasutaja nimi on ja tervitab kasutajat vastavalt
+#
+echo -e "Mis kell on: \c" #küsib ja salvestab aja 
+read aeg
+nimi="$(whoami)" #loeb kes programmi kasutab
+if [ $aeg -ge 6 -a $aeg -lt 12 ] #kui kell on 6 ja 12 vahel
+then
+	echo "Tere hommikust, $nimi!" #ütleb tere hommikust ja väljastab kasutaja nime
+elif [ $aeg -ge 12 -a $aeg -lt 18 ] # kul kell on 12 ja 18 vahel
+then
+	echo "Tere päevast, $nimi!" #ütleb tere päevast ja väljastab kasutaja nime
+elif [ $aeg -ge 18 -a $aeg -lt 22 ] #kui kell on 18 ja 22 vahel
+then
+	echo "Tere õhtust, $nimi!" #ütleb tere õhtust ja väljastab kasutaja nime
+elif [ $aeg -ge 22 -a $aeg -le 24 ] #kui kell on 22 ja 24 vahel
+then
+	echo "Head ööd, $nimi!" #ütleb head ööd ja väljastab kasutaja nime
+elif [ $aeg -ge 0 -a $aeg -lt 6 ] #kui kell on 0 ja 6 vahel
+then
+	echo "Head ööd, $nimi!" #ütleb head ööd ja väljastab kasutaja nime
+else
+	echo "Vale sisend"
+fi
+#
+# skripti lõpp
