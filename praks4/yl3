@@ -1,0 +1,12 @@
+#! /bin/bash
+
+# abiks bussiekskursiooni korraldamisel 
+echo -n "Mitu reisijat grupis: "
+read reisijad #küsib reisijate arvu
+echo -n "Mitu kohta on bussis: "
+read kohad #küsib kohtade arvu
+echo "Täis saab "`expr $reisijad / $kohad`" bussi." #arvutab välja mitu bussi saab täielikult täis
+echo "Maha jääb " `expr $reisijad % $kohad`" reisijat." #arvutab välja mitu reisijat jääb üle
+
+#skripti lõpp
+

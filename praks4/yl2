@@ -1,0 +1,17 @@
+#! /bin/bash
+# küpsise tordi valmistamise abiprogramm
+# küsib kandiku ja küpsiste suurust, mitu kihti, mitu küpsist pakis
+read -p "Mis on teie aluskandiku pikkus?: " apikkus
+read -p "Mis on teie aluskandiku laius?: " alaius
+read -p "Mis on küpsise pikkus?:" kpikkus
+read -p "Mis on küpsise laius?:" klaius
+read -p "Mitu tordi kihti teete: " kiht
+read -p "mitu küpsist on pakis: " pakk
+
+vaartus=`expr $apikkus \* $alaius / $kpikkus / $klaius \* $kiht / $pakk`
+#defineerib ja arvutab vaartuse
+# \* korrutamine
+# / jagamine
+echo Tordi jaoks on vaja $vaartus pakki küpsist.
+#väljastab lõpptulemuse
+#skripti lõpp
