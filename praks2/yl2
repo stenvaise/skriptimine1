@@ -1,0 +1,11 @@
+#! /bin/bash
+#
+# prindib välja saavutused aines
+#
+echo -n "Sten Väise," #esimene rida
+echo " IS118" #esimene rida
+echo "Skriptimise alused - tundub uus ja teistsugune." #teine rida
+echo "Keeruline kuid õpitav, loodan elementaarsed teadmised omistada" #kolmas rida
+whoami
+ls -l /home/user/
+#skripti lõpp
