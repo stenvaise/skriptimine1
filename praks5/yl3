@@ -1,0 +1,8 @@
+#! /bin/bash
+#Puhkusereis
+# päevad 0-6 , 0 = pyhapäev... 6 = laupäev
+# kõik väärtused numbritega!!!
+read -p "Kuna reisile lähed? " paev #mis päeval lähed
+read -p "Mitmeks päevaks? " aeg #mitu päeva reisil
+echo `expr \( $paev + $aeg \) % 7 ` #arvutab välja kuna tagasi jõuad
+#skripti lõpp

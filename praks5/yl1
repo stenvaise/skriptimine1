@@ -1,0 +1,16 @@
+#! /bin/bash
+# Pythagorase teoreem
+# Küsib täisnurkse kolmnurga kaatetite pikkust
+# Vastuseks annab hüpotenuusi pikkuse
+read -p "Sisesta täisnurkse kolmnurga külje a pikkus (CM) " a
+#Küsib külje pikkuse
+read -p "Sisesta täisnurkse kolmnurga külje b pikkus (CM) " b
+#Küsib külje pikkuse
+c=`expr  $a \* $a + $b \* $b `
+#arvutab C ruudu pikkuse Pyth teoreemi põhjal
+ruutjuur=$(bc <<< "scale=2; sqrt ($c)")
+#Võtab ruutjuure C väärtusest
+echo "Hypotenuusi pikkus on " $ruutjuur "CM"
+#Prindib välja tulemuse
+#
+##skripti lõpp

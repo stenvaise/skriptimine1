@@ -1,0 +1,14 @@
+ #! /bin/bash
+#
+#Kolmnurga pindala arvutamine Heroni valemiga kolme kasutaja sisestatud küljepikkuse põhjal
+read -p "Külje pikkus a (CM) " a
+read -p "Külje pikkus b (CM) " b
+read -p "Küle pikkus c (CM) " c
+#Kasutaja sisestab vajalikud mõõtmed valemile sentimeetrites
+terve=`expr $a + $b + $c` #terve kolmnurga ümbermõõt
+P=$(bc <<< "scale=2; ($terve)/2") #pool kolmnurga ümbermõõtu
+S=$(bc <<< "scale=2; $P*($P-$a)*($P-$b)*($P-$c)") #heroni valem ilma ruutjuureta
+echo "Kolmnurga pindala on "$(bc <<< "scale=2; sqrt ($S)")" sentimeetrit ruudus." #arvutab ruutjuure heroni valemist ja annab kasutajale vastuse
+#
+#skriptilõpp
+
